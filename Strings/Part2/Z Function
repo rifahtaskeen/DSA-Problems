@@ -6,3 +6,16 @@ For string matching: Combine needle + "#" + haystack and calculate the Z-array. 
 
 TC: O(n + m)
 SC: O(n + m) for the combined string and Z-array.
+
+needle + "#" + haystack
+          ↓
+Calculate Z values
+          ↓
+Z[i] tells how many characters
+match the beginning (needle)
+          ↓
+Z[i] == needle length?
+       ↙       ↘
+     YES        NO
+      ↓          ↓
+   Found       Continue
