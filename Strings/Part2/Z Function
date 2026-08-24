@@ -1,0 +1,8 @@
+Z-function: For every position i, Z[i] tells us how many characters starting from i match the beginning (prefix) of the entire string.
+
+Example: For "ababa" → Z = [5, 0, 3, 0, 1]. At index 2, "aba" matches the prefix "aba", so Z[2] = 3.
+
+For string matching: Combine needle + "#" + haystack and calculate the Z-array. If Z[i] == needle.length(), the complete needle has been found.
+
+TC: O(n + m)
+SC: O(n + m) for the combined string and Z-array.
